@@ -1,0 +1,11 @@
+Flask
+seaborn
+pandas
+numpy
+networkx
+osmnx
+geopy
+scikit-learn
+
+
+-e .
