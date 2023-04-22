@@ -2,7 +2,7 @@ import sys
 import os
 from src.exception import CustomException
 from src.logger import logging
-from src.utils import load_object
+from src.Utility import load_object
 import pandas as pd
 
 
@@ -69,7 +69,7 @@ class CustomData:
             ' Delivery_person_Age,':[self.Delivery_person_Age],
             'Delivery_person_Ratings':[self.Delivery_person_Ratings],
             'Weather_conditions':[self.Weather_conditions],
-            'Road_traffic_density'  [self.Road_traffic_density],
+            'Road_traffic_density' : [self.Road_traffic_density],
             'Vehicle_condition':  [self.Vehicle_condition] ,
             'Type_of_order' : [self.Type_of_order], 
             'Type_of_vehicle'  : [ self.Type_of_vehicle ] ,

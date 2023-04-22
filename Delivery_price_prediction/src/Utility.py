@@ -78,3 +78,55 @@ def calculate_spherical_distance(lat1, lon1, lat2, lon2, r=6371):
          np.square(sin((lambda2-lambda1)/2)))
     d = 2*r*asin(np.sqrt(a))
     return d
+
+
+drop_list_pipe=['Restaurant_latitude',
+        'Restaurant_longitude', 
+        'Delivery_location_latitude',
+        'Delivery_location_longitude',
+        'Time_Orderd', 
+        'Time_Order_picked', 
+        'Order_Date',
+        'ID',
+        'Delivery_person_ID'
+
+                ]
+    # Column dropper
+def dropper(df):
+    df.drop(drop_list_pipe,inplace=True, axis=1)
+    return df
+
+
+
+#Extring month column 
+def month_spliter(df):
+    df['Order_Month']=df['Order_Date'].apply(lambda x: int(x.split("-")[1]))
+    return df
+
+
+#Distance converter
+def distance_con_pipe(df):
+    
+        df['Distance']=[
+            round(calculate_spherical_distance(*row), 2) 
+            for row in df[['Restaurant_latitude', 'Restaurant_longitude', 
+                        'Delivery_location_latitude', 
+                        'Delivery_location_longitude']].values
+                    ]
+        return df
+
+
+# Pickuptime function
+def get_pickup_time(df):
+    def time_to_minutes(x):
+        if ((isinstance(x,str))and(":" in x)):
+            return float(x.split(":")[0]) * 60 + (float(x.split(":")[1]))
+        else:
+            return np.nan
+
+
+    df['Time_Order_picked']=df['Time_Order_picked'].apply(time_to_minutes)
+    df['Time_Orderd']=df['Time_Orderd'].apply(time_to_minutes)
+    df['pickup_time']=df['Time_Order_picked']-df['Time_Orderd']
+    return df
+

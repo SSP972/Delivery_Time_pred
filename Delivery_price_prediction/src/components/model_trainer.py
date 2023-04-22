@@ -5,8 +5,8 @@ from sklearn.linear_model import LinearRegression, Ridge,Lasso,ElasticNet
 from src.exception import CustomException
 from src.logger import logging
 
-from src.utils import save_object
-from src.utils import evaluate_model
+from src.Utility import save_object
+from src.Utility import evaluate_model
 
 from dataclasses import dataclass
 import sys
