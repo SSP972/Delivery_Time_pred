@@ -130,3 +130,13 @@ def get_pickup_time(df):
     df['pickup_time']=df['Time_Order_picked']-df['Time_Orderd']
     return df
 
+#input data given to the model by user 
+def input_data_collector(input_data_path:str,final_new_data):
+    try:
+        collected_data=pd.read_csv(input_data_path)
+        
+        df = pd.concat([collected_data, final_new_data], ignore_index=True)
+        df.to_csv(input_data_path,index=False)
+    except FileNotFoundError :
+        final_new_data.to_csv(input_data_path,index=False)
+        logging.info('data collection file is created successfully')

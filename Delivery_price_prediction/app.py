@@ -2,14 +2,24 @@ from flask import Flask,request,render_template,jsonify
 from src.pipeline.prediction_pipeline import CustomData,PredictPipeline
 import os
 from src.logger import logging
+import pandas as pd
+from src.Utility import input_data_collector
+
+
+
+
+
+
+
+
 application=Flask(__name__,template_folder='/config/workspace/Delivery_price_prediction/templates')
 
 app=application
 
 import os 
-print(os.chdir(r'Delivery_price_prediction'),
+# print(os.chdir(r'Delivery_price_prediction'),
 
-os.getcwd())
+# os.getcwd())
 
 @app.route('/')
 def home_page():
@@ -40,17 +50,20 @@ def predict_datapoint():
             
                         )
 
+        input_data_path=os.path.join('Delivery_price_prediction/artifact','inputdata.csv')
         final_new_data=data.get_data_as_dataframe()
         logging.info(f'{final_new_data.head(1)}')
-        final_new_data.to_csv('log12231.csv',index=False)
+        
         predict_pipeline=PredictPipeline()
         pred=predict_pipeline.predict(final_new_data)
 
         results=round(pred[0],2)
-
-        return render_template('templates/results.html',final_result=results)
+        final_new_data['Time_taken (min)']=results
+        input_data_collector(input_data_path, final_new_data)
+        
+        return render_template('results.html',final_result=results)
 
 
 if __name__=="__main__":
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0',port=8000)
     
