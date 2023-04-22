@@ -105,7 +105,7 @@ class DataTransformation:
             preprocessing_obj = self.get_data_transformation_object()
             
             target_column_name = 'Time_taken (min)'
-            drop_columns = [target_column_name]
+            drop_columns = [target_column_name,'ID']
             
             input_feature_train_df = train_df.drop(columns=drop_columns,axis=1)
             target_feature_train_df=train_df[target_column_name]
