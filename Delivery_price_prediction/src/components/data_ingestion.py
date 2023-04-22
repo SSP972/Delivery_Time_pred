@@ -13,9 +13,9 @@ from src.components.data_transformation import DataTransformation
 
 @dataclass
 class DataIngestionconfig:
-    train_data_path:str=os.path.join('Diamond_price_pred/artifacts','train.csv')
-    test_data_path:str=os.path.join('Diamond_price_pred/artifacts','test.csv')
-    raw_data_path:str=os.path.join('Diamond_price_pred/artifacts','raw.csv')
+    train_data_path:str=os.path.join('Delivery_price_prediction/artifact','train.csv')
+    test_data_path:str=os.path.join('Delivery_price_prediction/artifact','test.csv')
+    raw_data_path:str=os.path.join('Delivery_price_prediction/artifact','raw.csv')
 
 ## create a class for Data Ingestion
 class DataIngestion:
