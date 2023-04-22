@@ -66,20 +66,20 @@ class CustomData:
     def get_data_as_dataframe(self):
         try:
             custom_data_input_dict   =   {
-                   ' Delivery_person_Age,':[self.Delivery_person_Age],
-                  'Delivery_person_Ratings':[self.Delivery_person_Ratings],
-                'Weather_conditions':[self.Weather_conditions],
-                  'Road_traffic_density'  [self.Road_traffic_density],
-                'Vehicle_condition':  [self.Vehicle_condition] ,
-               'Type_of_order' : [self.Type_of_order], 
-                'Type_of_vehicle'  : [ self.Type_of_vehicle ] ,
-               'multiple_deliveries' :  [  self.multiple_deliveries  ],
-                'Festival'  :[ self.Festival ] ,
-              ' City': [  self.City],
-               'pickup_time': [  self.pickup_time ] ,
-                'Order_Day'  : [ self.Order_Day ] ,
-                'Order_Month' : [  self.Order_Month ],
-                 'Distance': [self.Distance  ]
+            ' Delivery_person_Age,':[self.Delivery_person_Age],
+            'Delivery_person_Ratings':[self.Delivery_person_Ratings],
+            'Weather_conditions':[self.Weather_conditions],
+            'Road_traffic_density'  [self.Road_traffic_density],
+            'Vehicle_condition':  [self.Vehicle_condition] ,
+            'Type_of_order' : [self.Type_of_order], 
+            'Type_of_vehicle'  : [ self.Type_of_vehicle ] ,
+            'multiple_deliveries' :  [  self.multiple_deliveries  ],
+            'Festival'  :[ self.Festival ] ,
+            ' City': [  self.City],
+            'pickup_time': [  self.pickup_time ] ,
+            'Order_Day'  : [ self.Order_Day ] ,
+            'Order_Month' : [  self.Order_Month ],
+            'Distance': [self.Distance  ]
         
             }
             df   =   pd.DataFrame(custom_data_input_dict)
