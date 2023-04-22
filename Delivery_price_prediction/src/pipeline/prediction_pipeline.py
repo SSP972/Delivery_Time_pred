@@ -46,7 +46,7 @@ class CustomData:
         
         
 
-                 self.Delivery_person_Age   =   Delivery_person_Age,
+                 self.Delivery_person_Age   =   Delivery_person_Age
                  self.Delivery_person_Ratings =  Delivery_person_Ratings
                  self.Weather_conditions =  Weather_conditions
                  self.Road_traffic_density =  Road_traffic_density
