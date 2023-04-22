@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+   <head>
+      <title>Predict Delivery Time</title>
+   </head>
+   <body>
+      <h1>Predict Delivery Time</h1>
+      <form method="POST" action="/predict">
+         <p>Delivery person age: <input type="number" name="Delivery_person_Age" required></p>
+         <p>Delivery person ratings: <input type="number" step="0.1" name="Delivery_person_Ratings" required></p>
+         <p>Weather conditions: 
+            <select name="Weather_conditions" required>
+               <option value="Sunny">Sunny</option>
+               <option value="Cloudy">Cloudy</option>
+               <option value="Windy">Windy</option>
+               <option value="Fog">Fog</option>
+               <option value="Stormy">Stormy</option>
+               <option value="Sandstorms">Sandstorms</option>
+            </select>
+         </p>
+         <p>Road traffic density: 
+            <select name="Road_traffic_density" required>
+               <option value="Low">Low</option>
+               <option value="Medium">Medium</option>
+               <option value="High">High</option>
+               <option value="Jam">Jam</option>
+            </select>
+         </p>
+         <p>Vehicle condition: 
+            <input type="number" name="Vehicle_condition" required>
+         </p>
+         <p>Type of order: 
+            <select name="Type_of_order" required>
+               <option value="Snack">Snack</option>
+               <option value="Meal">Meal</option>
+               <option value="Drinks">Drinks</option>
+               <option value="Buffet">Buffet</option>
+            </select>
+         </p>
+         <p>Type of vehicle: 
+            <select name="Type_of_vehicle" required>
+               <option value="bicycle">Bicycle</option>
+               <option value="electric_scooter">Electric scooter</option>
+               <option value="scooter">Scooter</option>
+               <option value="motorcycle">Motorcycle</option>
+            </select>
+         </p>
+         <p>Multiple deliveries: 
+            <input type="number" name="multiple_deliveries" required>
+         </p>
+         <p>Festival: 
+            <select name="Festival" required>
+               <option value="No">No</option>
+               <option value="Yes">Yes</option>
+            </select>
+         </p>
+         <p>City: 
+            <select name="City" required>
+               <option value="Metropolitian">Metropolitian</option>
+               <option value="Urban">Urban</option>
+               <option value="Semi-Urban">Semi-Urban</option>
+            </select>
+         </p>
+         <p>Pickup time: <input type="number" step="0.1" name="pickup_time" required></p>
+         <p>Order month: <input type="number" name="Order_Month" required></p>
+         <p>Travelling Distance: <input type="number" step="0.1" name="Distance" required></p>
+         <button type="submit">Predict</button>
+      </form>
+   </body>
+</html>

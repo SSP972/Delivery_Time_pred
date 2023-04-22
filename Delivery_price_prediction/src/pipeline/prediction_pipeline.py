@@ -41,7 +41,6 @@ class CustomData:
                  Festival:str,
                  City:str,
                  pickup_time:float,
-                 Order_Day:int,
                  Order_Month:int,
                  Distance:float):
         
@@ -58,7 +57,7 @@ class CustomData:
                  self.Festival  =  Festival
                  self.City  =  City
                  self.pickup_time  =  pickup_time
-                 self.Order_Day  =  Order_Day
+   
                  self.Order_Month  =  Order_Month
                  self.Distance  =  Distance
         
@@ -66,7 +65,7 @@ class CustomData:
     def get_data_as_dataframe(self):
         try:
             custom_data_input_dict   =   {
-            ' Delivery_person_Age,':[self.Delivery_person_Age],
+            'Delivery_person_Age':[self.Delivery_person_Age],
             'Delivery_person_Ratings':[self.Delivery_person_Ratings],
             'Weather_conditions':[self.Weather_conditions],
             'Road_traffic_density' : [self.Road_traffic_density],
@@ -75,9 +74,8 @@ class CustomData:
             'Type_of_vehicle'  : [ self.Type_of_vehicle ] ,
             'multiple_deliveries' :  [  self.multiple_deliveries  ],
             'Festival'  :[ self.Festival ] ,
-            ' City': [  self.City],
+            'City': [  self.City],
             'pickup_time': [  self.pickup_time ] ,
-            'Order_Day'  : [ self.Order_Day ] ,
             'Order_Month' : [  self.Order_Month ],
             'Distance': [self.Distance  ]
         
