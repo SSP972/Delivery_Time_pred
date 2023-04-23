@@ -1,0 +1,15 @@
+Delivery_person_Age,Delivery_person_Ratings,Weather_conditions,Road_traffic_density,Vehicle_condition,Type_of_order,Type_of_vehicle,multiple_deliveries,Festival,City,pickup_time,Order_Month,Distance,Time_taken (min)
+75,5,Sunny,Low,0,Snack,motorcycle,0,No,Metropolitian,10,1,2,36.61
+75,5,Sunny,Low,0,Snack,motorcycle,0,No,Metropolitian,10,1,1,36.61
+50,5,Sunny,Low,0,Snack,motorcycle,0,No,Metropolitian,10,1,1,27.2
+50,1,Sunny,Low,0,Snack,motorcycle,0,No,Metropolitian,10,1,1,54.91
+50,1,Sunny,Low,3,Snack,motorcycle,0,No,Metropolitian,10,1,1,48.88
+50,1,Sunny,Low,3,Snack,bicycle,0,No,Metropolitian,10,1,1,48.66
+50,1,Sunny,Low,3,Snack,scooter,0,No,Metropolitian,10,1,1,48.81
+50,1,Sunny,Low,3,Snack,electric_scooter,0,No,Metropolitian,10,1,1,48.73
+50,1,Sunny,Low,3,Snack,motorcycle,20,No,Metropolitian,10,1,1,120.43
+50,1,Sunny,Low,3,Snack,motorcycle,20,No,Metropolitian,120,1,1,119.91
+50,1,Sunny,Low,3,Snack,motorcycle,20,No,Metropolitian,240,1,1,119.35
+50,1,Sunny,Low,3,Snack,motorcycle,20,No,Metropolitian,240,1,1,119.35
+50,1,Sunny,Low,3,Snack,motorcycle,20,No,Metropolitian,240,1,1,119.35
+50,1,Sunny,Low,3,Snack,motorcycle,20,No,Metropolitian,240,12,1,117.67

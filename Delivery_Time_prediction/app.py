@@ -12,12 +12,12 @@ from src.Utility import input_data_collector
 
 
 
-application=Flask(__name__,template_folder='/config/workspace/Delivery_price_prediction/templates')
+application=Flask(__name__,template_folder='/config/workspace/Delivery_Time_prediction/templates')
 
 app=application
 
 import os 
-# print(os.chdir(r'Delivery_price_prediction'),
+# print(os.chdir(r'Delivery_Time_prediction'),
 
 # os.getcwd())
 
@@ -50,7 +50,7 @@ def predict_datapoint():
             
                         )
 
-        input_data_path=os.path.join('Delivery_price_prediction/artifact','inputdata.csv')
+        input_data_path=os.path.join('Delivery_Time_prediction/artifact','inputdata.csv')
         final_new_data=data.get_data_as_dataframe()
         logging.info(f'{final_new_data.head(1)}')
         

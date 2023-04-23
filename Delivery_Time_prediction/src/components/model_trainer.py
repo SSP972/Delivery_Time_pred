@@ -14,7 +14,7 @@ import os
 
 @dataclass 
 class ModelTrainerConfig:
-    trained_model_file_path = os.path.join('Delivery_price_prediction/artifact','model.pkl')
+    trained_model_file_path = os.path.join('Delivery_Time_prediction/artifact','model.pkl')
 
 
 class ModelTrainer:

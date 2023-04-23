@@ -15,7 +15,7 @@ from src.Utility import save_object,calculate_spherical_distance,dropper,month_s
 
 @dataclass
 class DataTransformationConfig:
-    preprocessor_obj_file_path=os.path.join('Delivery_price_prediction/artifact','preprocessor.pkl')
+    preprocessor_obj_file_path=os.path.join('Delivery_Time_prediction/artifact','preprocessor.pkl')
 
 class DataTransformation:
     def __init__(self):

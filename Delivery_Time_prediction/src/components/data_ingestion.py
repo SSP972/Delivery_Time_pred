@@ -1,3 +1,5 @@
+import sys
+sys.path.append('/config/workspace/Delivery_Time_prediction/src')
 import os
 import sys
 from src.logger import logging
@@ -13,9 +15,9 @@ from src.components.data_transformation import DataTransformation
 
 @dataclass
 class DataIngestionconfig:
-    train_data_path:str=os.path.join('Delivery_price_prediction/artifact','train.csv')
-    test_data_path:str=os.path.join('Delivery_price_prediction/artifact','test.csv')
-    raw_data_path:str=os.path.join('Delivery_price_prediction/artifact','raw.csv')
+    train_data_path:str=os.path.join('Delivery_Time_prediction/artifact','train.csv')
+    test_data_path:str=os.path.join('Delivery_Time_prediction/artifact','test.csv')
+    raw_data_path:str=os.path.join('Delivery_Time_prediction/artifact','raw.csv')
 
 ## create a class for Data Ingestion
 class DataIngestion:
@@ -27,7 +29,7 @@ class DataIngestion:
         try:
               
 
-            df=pd.read_csv(os.path.join('Delivery_price_prediction/notebook/data','finalTrain.csv'))
+            df=pd.read_csv(os.path.join('Delivery_Time_prediction/notebook/data','finalTrain.csv'))
             logging.info('Dataset read as pandas Dataframe')
 
             os.makedirs(os.path.dirname(self.ingestion_config.raw_data_path),exist_ok=True)
