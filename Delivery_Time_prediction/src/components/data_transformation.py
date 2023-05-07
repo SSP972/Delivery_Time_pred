@@ -11,7 +11,7 @@ from sklearn.preprocessing import OrdinalEncoder,StandardScaler,OneHotEncoder
 from src.exception import CustomException
 from src.logger import logging
 import os
-from src.Utility import save_object,calculate_spherical_distance,dropper,month_spliter,get_pickup_time,distance_con_pipe
+from src.Utility import save_object,calculate_spherical_distance,dropper,get_pickup_time,distance_con_pipe
 
 @dataclass
 class DataTransformationConfig:
@@ -46,11 +46,6 @@ class DataTransformation:
                 ('Distance_converter',FunctionTransformer(distance_con_pipe))
                 ])
     
-            # Pipeline for date column
-            date_pipeline = Pipeline(steps=[
-                ('extract_month', FunctionTransformer(month_spliter))
-                                    ])
-
             # Pipeline for time columns
             time_pipeline = Pipeline(steps=[
                 ('time_conversion', FunctionTransformer(get_pickup_time))
@@ -64,8 +59,7 @@ class DataTransformation:
             # # Combine pipelines
             full_pipeline = Pipeline([
                 ('distance_preprocessing', distance_pipeline),
-                ('time_pipeline', time_pipeline),
-                ('date_pipeline', date_pipeline),    
+                ('time_pipeline', time_pipeline), 
                 ('Drop_non_essential', drop_non_essential)   
 
             ])
@@ -97,7 +91,7 @@ class DataTransformation:
             OHE_Cat_type_orders=['Snack', 'Meal', 'Drinks', 'Buffet']
 
             #Column Transformation
-            num_CT=['Delivery_person_Age', 'Delivery_person_Ratings','Vehicle_condition','pickup_time','Distance','Order_Month']
+            num_CT=['Delivery_person_Age', 'Delivery_person_Ratings','Vehicle_condition','pickup_time','Distance']
             ordinal_CT=['Weather_conditions', 'Road_traffic_density','Type_of_vehicle', 'Festival']
             OHE_CT=['City','Type_of_order']
 

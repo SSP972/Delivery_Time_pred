@@ -41,7 +41,6 @@ def predict_datapoint():
                         Festival =  request.form.get('Festival'),
                         City =  request.form.get('City'),
                         pickup_time = request.form.get('pickup_time'),
-                        Order_Month = request.form.get('Order_Month'),
                         Distance = request.form.get('Distance')
             
                         )
@@ -55,11 +54,15 @@ def predict_datapoint():
 
         results=round(pred[0],2)                    
         final_new_data['Time_taken (min)']=results                      # Collection of data from client
-        input_data_collector(input_data_path, final_new_data)
+        input_data_collector(input_data_path, final_new_data) 
         
         return render_template('results.html',final_result=results)
+@app.route('/train',methods=['GET','POST'])
 
+def predict_datapoint():
+    if request.method=='GET':
+        return 
 
 if __name__=="__main__":
-    app.run(host='0.0.0.0',port=8000)
+    app.run(host='0.0.0.0',port=8000,debug=True)
     

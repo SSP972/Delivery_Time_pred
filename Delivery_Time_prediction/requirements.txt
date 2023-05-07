@@ -7,5 +7,5 @@ osmnx
 geopy
 scikit-learn
 xgboost
-
+lightgbm
 -e .

@@ -41,7 +41,6 @@ class CustomData:
                  Festival:str,
                  City:str,
                  pickup_time:float,
-                 Order_Month:int,
                  Distance:float):
         
         
@@ -57,8 +56,6 @@ class CustomData:
                  self.Festival  =  Festival
                  self.City  =  City
                  self.pickup_time  =  pickup_time
-   
-                 self.Order_Month  =  Order_Month
                  self.Distance  =  Distance
         
         
@@ -76,7 +73,6 @@ class CustomData:
             'Festival'  :[ self.Festival ] ,
             'City': [  self.City],
             'pickup_time': [  self.pickup_time ] ,
-            'Order_Month' : [  self.Order_Month ],
             'Distance': [self.Distance  ]
         
             }

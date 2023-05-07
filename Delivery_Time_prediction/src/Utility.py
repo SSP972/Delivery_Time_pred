@@ -46,7 +46,7 @@ def evaluate_model(X_train,y_train,X_test,y_test,models):
             test_model_score = r2_score(y_test,y_test_pred)
 
             report[list(models.keys())[i]] =  test_model_score
-
+        
         return report
 
     except Exception as e:
@@ -67,7 +67,7 @@ def load_object(file_path):
 
 def calculate_spherical_distance(lat1, lon1, lat2, lon2, r=6371):
     # Convert degrees to radians
-    coordinates = lat1, lon1, lat2, lon2
+    coordinates = abs(lat1), abs(lon1), abs(lat2), abs(lon2)
     # radians(c) is same as c*pi/180
     phi1, lambda1, phi2, lambda2 = [
         radians(c) for c in coordinates
@@ -96,12 +96,6 @@ def dropper(df):
     df.drop(drop_list_pipe,inplace=True, axis=1)
     return df
 
-
-
-#Extring month column 
-def month_spliter(df):
-    df['Order_Month']=df['Order_Date'].apply(lambda x: int(x.split("-")[1]))
-    return df
 
 
 #Distance converter
