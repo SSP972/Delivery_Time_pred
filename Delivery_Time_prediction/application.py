@@ -8,10 +8,6 @@ from src.Utility import input_data_collector
 
 
 
-
-
-
-
 application=Flask(__name__,template_folder='/config/workspace/Delivery_Time_prediction/templates')
 
 app=application

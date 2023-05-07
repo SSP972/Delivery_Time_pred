@@ -6,6 +6,6 @@ networkx
 osmnx
 geopy
 scikit-learn
-
+xgboost
 
 -e .
