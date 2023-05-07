@@ -8,7 +8,7 @@ from src.Utility import input_data_collector
 
 
 
-application=Flask(__name__,template_folder='/config/workspace/Delivery_Time_prediction/templates')
+application=Flask(__name__)
 
 app=application
 
@@ -53,8 +53,8 @@ def predict_datapoint():
         predict_pipeline=PredictPipeline()
         pred=predict_pipeline.predict(final_new_data)
 
-        results=round(pred[0],2)
-        final_new_data['Time_taken (min)']=results
+        results=round(pred[0],2)                    
+        final_new_data['Time_taken (min)']=results                      # Collection of data from client
         input_data_collector(input_data_path, final_new_data)
         
         return render_template('results.html',final_result=results)

@@ -26,4 +26,5 @@ Delivery_person_Age,Delivery_person_Ratings,Weather_conditions,Road_traffic_dens
 25,2.5,Sunny,Low,1,Buffet,motorcycle,1,Yes,Urban,-26.0,12,-25,44.18
 25,2.5,Sunny,Low,1,Buffet,motorcycle,1,Yes,Urban,-26.0,12,-25,44.18
 25,2.0,Sunny,Low,1,Snack,bicycle,2,No,Metropolitian,25.0,2,25,43.28
-30,5,Fog,Medium,3,Meal,electric_scooter,2,Yes,Metropolitian,2,5,25,35.06
+30,5.0,Fog,Medium,3,Meal,electric_scooter,2,Yes,Metropolitian,2.0,5,25,35.06
+25,4.5,Sunny,Low,2,Meal,motorcycle,2,No,Metropolitian,25,9,25,23.07
