@@ -47,7 +47,7 @@ def predict_datapoint():
 
         input_data_path=os.path.join('Delivery_Time_prediction/artifact','inputdata.csv')
         final_new_data=data.get_data_as_dataframe()
-        logging.info(f'{final_new_data.head(1)}')
+        logging.info(f'{final_new_data.head(1)}') 
         
         predict_pipeline=PredictPipeline()
         pred=predict_pipeline.predict(final_new_data)
