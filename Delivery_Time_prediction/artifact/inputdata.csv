@@ -1,2 +1,6 @@
 Delivery_person_Age,Delivery_person_Ratings,Weather_conditions,Road_traffic_density,Vehicle_condition,Type_of_order,Type_of_vehicle,multiple_deliveries,Festival,City,pickup_time,Distance,Time_taken (min)
 25,2,Sunny,Low,2,Snack,bicycle,0,Yes,Metropolitian,52,45,41.08
+222,5,Sunny,Low,2,Snack,bicycle,222,No,Metropolitian,222,222,39.32
+222123,5,Sunny,Low,2,Snack,bicycle,222122222222,No,Metropolitian,222,222,39.32
+222123,5,Sunny,Low,2,Snack,bicycle,222122222222,No,Metropolitian,22222222222222,2222222222222222,39.32
+2222222222222,2,Sunny,Low,1,Snack,bicycle,22222222222222222222222222,No,Metropolitian,22222222222222222222222,22222222222222222222,38.14

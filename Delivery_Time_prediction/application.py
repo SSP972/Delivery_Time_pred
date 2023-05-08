@@ -5,7 +5,7 @@ from src.logger import logging
 import pandas as pd
 from src.Utility import input_data_collector
 
-
+from src.pipeline.training_pipeline import run_training
 
 
 application=Flask(__name__)
@@ -47,7 +47,7 @@ def predict_datapoint():
 
         input_data_path=os.path.join('Delivery_Time_prediction/artifact','inputdata.csv')
         final_new_data=data.get_data_as_dataframe()
-        logging.info(f'{final_new_data.head(1)}') 
+        logging.info(f'{final_new_data.head(1)}')
         
         predict_pipeline=PredictPipeline()
         pred=predict_pipeline.predict(final_new_data)
@@ -59,9 +59,8 @@ def predict_datapoint():
         return render_template('results.html',final_result=results)
 @app.route('/train',methods=['GET','POST'])
 
-def predict_datapoint():
-    if request.method=='GET':
-        return 
+def train_model():
+    return run_training()
 
 if __name__=="__main__":
     app.run(host='0.0.0.0',port=8000,debug=True)
